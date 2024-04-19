@@ -35,3 +35,15 @@ nav a:hover{
         text-align: center;
     }
 }
+
+footer  {
+    background-color: #333;
+    padding: 1px;
+    border-top: solid  #484848 10px;
+}
+
+footer p{
+    text-align: center;
+    color: white;
+
+}
