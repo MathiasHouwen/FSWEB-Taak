@@ -14,6 +14,7 @@ nav ul{
 nav a {
     display: block;
     color: #fff;
+    background-color: #484848;
     text-decoration: none;
     padding: 0.5rem 1rem;
     transition: background-color 0.3s ease;
@@ -22,4 +23,15 @@ nav a {
 nav a:hover{
     background-color: #ddd;
     color: black;
+}
+
+/*TODO FIX*/
+@media screen and (max-width: 525px) {
+    nav{
+        flex-direction: column;
+    }
+    nav ul{
+        width: 100%;
+        text-align: center;
+    }
 }
