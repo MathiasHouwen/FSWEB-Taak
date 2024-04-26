@@ -1,5 +1,3 @@
-
-
 <script>
     import Navbar from "./navbar.svelte";
     import Footer from "./footer.svelte";
@@ -8,7 +6,11 @@
 
 <Header></Header>
 <Navbar></Navbar>
-<h1>HomePage</h1>
-<p>This is the home page</p>
+
+<main>
+    <h1>HomePage</h1>
+    <p>This is the home page</p>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>v
+</main>
 
 <Footer></Footer>
