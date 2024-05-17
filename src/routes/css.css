@@ -12,6 +12,7 @@
 :root{
     --BackGround_COlOUR:  beige;
     --Accent-COLOUR: white;
+    --Colour_2:  rgb(188, 188, 172);
     --COLOUR_3: grey;
 }
 
@@ -95,6 +96,6 @@ footer p{
 }
 
 .item {
-    background-color: red;
+    background-color: var(--Colour_2);
 }
   
