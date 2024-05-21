@@ -10,12 +10,12 @@
 
     <ul>
         <li><h3>Routes:</h3></li>
-        <li><a href="">Homepage</a></li>
-        <li><a href="">recpeten</a></li>
-        <li><a href="">contact</a></li>
-        <li><a href="">login</a></li>
+        <li><a href="http://localhost:5173/">Homepage</a></li>
+        <li><a href="http://localhost:5173/recepten">recpeten</a></li>
+        <li><a href="http://localhost:5173/contact">contact</a></li>
+        <li><a href="http://localhost:5173/login">login</a></li>
         <li><a href="">profile</a></li>
-        <li><a href="">crud</a></li>
+        <li><a href="http://localhost:5173/crud">crud</a></li>
     </ul>
 
 </footer>

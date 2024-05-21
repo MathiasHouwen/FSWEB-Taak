@@ -25,6 +25,7 @@ nav {
 
     padding: 1px;
     border-bottom: solid  var(--COLOUR_3) 10px;
+
 }
 
 nav ul{
@@ -65,6 +66,7 @@ header{
     display: flex;
     justify-content: space-around;
     background-color: var(--Accent-COLOUR);
+    
 
 }
 
@@ -126,9 +128,42 @@ th, td {
     
 }
 
-
 table{
     border:1px solid black;
     width: 95%;
     margin-left: 2.5%;
+}
+
+h1 {
+    z-index: 999;
+}
+
+#homepageImg {
+    width: 100%;
+}
+
+.headerImage {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Ensure the container takes the full width */
+}
+  
+.headerImage h1 {
+    position: absolute;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    z-index: 1;
+}
+
+main p {
+    font-size: x-large;
+}
+
+@media screen and (max-width: 525px) {
+    main p {
+        font-size: medium;
+    }
 }
