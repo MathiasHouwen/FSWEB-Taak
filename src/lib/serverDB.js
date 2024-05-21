@@ -25,6 +25,47 @@ export async function saveToForm(naam, voornaam, email,  msg){
     }
 }
 
+export async function delteRowFromID(id){
+    const { error } = await supabase.from('Recepten')
+                                        .delete()
+                                        .eq('id', id)
+}
+
+export async function createRow(naam, msg){
+
+    const {data,error} = await supabase.from("Recepten").insert([
+        {
+            Naam: naam,
+            korte_beschrijving: msg
+        }
+    ]).select()
+
+
+}
+
+export async function updateRow(id, updateNaam, naam, updateMSG, msg ){
+
+    console.log(id)
+    console.log(updateNaam)
+    console.log(naam)
+    console.log(updateMSG)
+    console.log(msg)
+
+    if(updateNaam){
+        const { error } = await supabase
+            .from('Recepten')
+            .update({ Naam: naam })
+            .eq('id', id)
+    }
+
+    if(updateMSG){
+        const { error } = await supabase
+            .from('Recepten')
+            .update({ korte_beschrijving: msg })
+            .eq('id', id)
+    }
+}
+
 export async function signUpUser(email, password){
     let { data, error } = await supabase.auth.signUp({
         email: email,

@@ -12,6 +12,7 @@
 
 <Header></Header>
 <Navbar></Navbar>
+
 <div class="container">
     {#each data.Recepten as recept}
         <div class="item">
