@@ -8,9 +8,12 @@
 <Navbar></Navbar>
 
 <main>
+
+    <!-- svelte-ignore a11y-img-redundant-alt -->
+    <img src="cookingpot.jpg" alt="picture of pot" width=100%>
     <h1>HomePage</h1>
     <p>This is the home page</p>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>v
+
 </main>
 
 <Footer></Footer>

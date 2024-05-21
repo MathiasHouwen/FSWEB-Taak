@@ -44,13 +44,6 @@ export async function createRow(naam, msg){
 }
 
 export async function updateRow(id, updateNaam, naam, updateMSG, msg ){
-
-    console.log(id)
-    console.log(updateNaam)
-    console.log(naam)
-    console.log(updateMSG)
-    console.log(msg)
-
     if(updateNaam){
         const { error } = await supabase
             .from('Recepten')

@@ -17,7 +17,8 @@
     <label for="pass">password</label><br>
     <input type="password" id="pass" name="pass" placeholder="password.."><br>
 
-    <button>login or sign-up</button>
+    <button>login</button>
+    <button>SignUp</button>
 </form>
 
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>

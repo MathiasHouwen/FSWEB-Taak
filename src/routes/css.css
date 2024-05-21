@@ -73,15 +73,36 @@ header input[type="text"] {
 }
 
 footer  {
-    background-color: #333;
+    background-color: var(--Accent-COLOUR);
     padding: 1px;
-    border-top: solid  #484848 10px;
+    border-top: solid  var(--Colour_2) 10px;
+    display: flex;
+    justify-content: space-around;
 }
 
-footer p{
-    text-align: center;
-    color: var(--Accent-COLOUR);
+footer ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
+footer li{
+    margin-bottom: 1vh;
+}
+
+footer li a{
+    text-decoration: none;
+    color: inherit;
+}
+
+footer li a:hover{
+    text-decoration: underline;
+}
+
 
 .container {
     display: grid;
