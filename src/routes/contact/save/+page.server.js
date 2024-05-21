@@ -1,7 +1,4 @@
-import {PUBLIC_KEY, PUBLIC_SERVER} from '$env/static/public';
-import { createClient } from '@supabase/supabase-js';
-
-const supabase = createClient(PUBLIC_SERVER, PUBLIC_KEY);
+import { saveToForm } from '$lib/serverDB'
 
 /** @type {import('./$types').PageServerLoad} */
 export async function load() {
@@ -17,18 +14,6 @@ export const actions = {
         const email = formData.get('email')
         const msg = formData.get('msg')
 
-        const {data,error} = await supabase.from("form").insert([
-            {
-                naam: naam,
-                voornaam: voornaam,
-                email: email,
-                msg : msg
-            }
-        ]).select()
-        console.log(error)
-        return {
-            success: 1,
-            feedbackmsg: error
-        }
+        return saveToForm(naam, voornaam, email, msg)
 	}
 };

@@ -8,3 +8,19 @@ export async function loadRecepten(){
 
     return data;
 }
+
+export async function saveToForm(naam, voornaam, email,  msg){
+    const {data,error} = await supabase.from("form").insert([
+        {
+            naam: naam,
+            voornaam: voornaam,
+            email: email,
+            msg : msg
+        }
+    ]).select()
+    console.log(error)
+    return {
+        success: 1,
+        feedbackmsg: error
+    }
+}

@@ -9,5 +9,5 @@
     <!-- svelte-ignore a11y-invalid-attribute -->
     <ul><a href="">Profile</a></ul>
     <!-- svelte-ignore a11y-invalid-attribute -->
-    <ul><a href="">Login</a></ul>
+    <ul><a href="./login">Login</a></ul>
 </nav>
