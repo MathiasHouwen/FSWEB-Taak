@@ -11,34 +11,24 @@ export async function load() {
 /** @type {import('./$types').Actions} */
 export const actions = {
 	default: async ({request}) => {
-        const data = await request.formData();
-        const naam = data.get('naam')
-        const voornaam = data.get('voornaam')
-        const email = data.get('email')
-        const msg = data.get('msg')
+        const formData = await request.formData();
+        const naam = formData.get('naam')
+        const voornaam = formData.get('voornaam')
+        const email = formData.get('email')
+        const msg = formData.get('msg')
 
-        const gevonden = await supabase.from("form/contact").select("*")
-                                 .eq("naam", naam)
-                                 .eq("voornaam", voornaam)
-                                 .eq("email", email)
-                                 .eq("msg", msg)
-        if (gevonden.data.length > 0) {
-            return {
-                success: 0
+        const {data,error} = await supabase.from("form").insert([
+            {
+                naam: naam,
+                voornaam: voornaam,
+                email: email,
+                msg : msg
             }
-        }
-        else {
-            const {data,error} = await db.from("form/contact").insert([
-                {
-                    naam: naam,
-                    voornaam: voornaam,
-                    email: email,
-                    msg : msg
-                }
-            ]).select()
-            return {
-                success: 1
-            }
+        ]).select()
+        console.log(error)
+        return {
+            success: 1,
+            feedbackmsg: error
         }
 	}
 };

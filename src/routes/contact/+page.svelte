@@ -6,10 +6,9 @@
     
 	/** @type {import('./$types').ActionData} */
 	// data uit actions van page.server.js
-    export let form;
 
     let naam = "iemand"
-    let achternaam = "iemand"
+    let voornaam = "iemand"
     let email = "example@gmail.com"
     let msg = "HIHIHIH"
 
@@ -23,12 +22,12 @@
 <Navbar></Navbar>
 
 <form method="POST" action="./contact/save">
-    <input type="text" id="fname" name="firstname" placeholder="Your name.." bind:value="{naam}">
-    <input type="text" id="lname" name="lastname" placeholder="Your last name.." bind:value="{achternaam}"><br>
+    <input type="text" id="voornaam" name="voornaam" placeholder="voornaam.." bind:value="{voornaam}">
+    <input type="text" id="naam" name="naam" placeholder="Your last name.." bind:value="{naam}"><br>
     
-    <input type="email" id="fmail" name="email" placeholder="email.." bind:value="{email}"><br>
+    <input type="email" id="email" name="email" placeholder="email.." bind:value="{email}"><br>
 
-    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px" bind:value="{msg}"></textarea><br>
+    <textarea id="msg" name="msg" placeholder="Write something.." style="height:200px" bind:value="{msg}"></textarea><br>
     <button>SUBMIT TO ME!</button>
 </form>
 
