@@ -97,5 +97,6 @@ footer p{
 
 .item {
     background-color: var(--Colour_2);
+    padding: 1vh;
 }
   
