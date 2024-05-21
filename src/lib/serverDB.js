@@ -24,3 +24,17 @@ export async function saveToForm(naam, voornaam, email,  msg){
         feedbackmsg: error
     }
 }
+
+export async function signUpUser(email, password){
+    let { data, error } = await supabase.auth.signUp({
+        email: email,
+        password: password
+    })
+}
+
+export async function logInUser(email, password){
+    let { data, error } = await supabase.auth.signInWithPassword({
+        email: email,
+        password: password
+    })
+}
