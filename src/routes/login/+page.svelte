@@ -1,10 +1,22 @@
 <script>
     /** @type {import('./$types').PageData} */
-    export let data;
+    export let form;
 
     import Navbar from '../navbar.svelte';
     import Footer from '../footer.svelte';
     import Header from '../header.svelte';
+
+
+    
+    if (typeof window !== 'undefined' && form !== null && form !== undefined) {
+        if (form) {
+            window.alert("hey ge bent ingeloged");
+        } else {
+            window.alert("Ongeldige login gegevens");
+            console.log(form)
+        }
+    }
+
 </script>
 
 <Header></Header>

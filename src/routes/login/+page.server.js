@@ -27,5 +27,6 @@ export const actions = {
         const hashDB = await getHashFromUser(email)
 
         const success = await bcrypt.compare(pass + PRIVATE_PEPPER, hashDB)
+        return success
 	}
 }

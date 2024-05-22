@@ -18,6 +18,7 @@
         <div class="item">
             <h4>{recept.Naam}</h4>
             <p>{recept.korte_beschrijving}</p>
+            <a href="/recepten/{recept.id}">Click me!</a>
         </div>
     {/each}
 </div>

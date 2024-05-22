@@ -34,7 +34,5 @@
         <h2>{element.Naam}</h2>
         <p>{element.korte_beschrijving}</p>
     </div>
-
 </main>
-
 <Footer></Footer>
