@@ -32,6 +32,7 @@
     <div class="ReceptVanDeDag">
         <h2>Recept van de dag!</h2>
         <h2>{element.Naam}</h2>
+        <p>{element.korte_beschrijving}</p>
     </div>
 
 </main>

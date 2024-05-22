@@ -59,16 +59,18 @@ export async function updateRow(id, updateNaam, naam, updateMSG, msg ){
     }
 }
 
-export async function signUpUser(email, password){
-    let { data, error } = await supabase.auth.signUp({
-        email: email,
-        password: password
-    })
+export async function signUp(email, hash){
+    const {data,error} = await supabase.from("Users").insert([
+        {
+            email: email,
+            pass: hash
+        }
+    ]).select()
 }
 
-export async function logInUser(email, password){
-    let { data, error } = await supabase.auth.signInWithPassword({
-        email: email,
-        password: password
-    })
+export async function getHashFromUser(email){
+    let { data, error } = await supabase.from('Users')
+        .select('pass')
+        .eq('email', email)
+    return data[0].pass
 }
