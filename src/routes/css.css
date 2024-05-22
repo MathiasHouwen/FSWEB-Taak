@@ -24,8 +24,9 @@ nav {
     background-color: var(--Accent-COLOUR);
 
     padding: 1px;
-    border-bottom: solid  var(--COLOUR_3) 10px;
+    border-bottom: solid  var(--Colour_2) 10px;
 
+    padding-bottom: 1vh;
 }
 
 nav ul{
@@ -35,15 +36,15 @@ nav ul{
 
 nav a {
     display: block;
-    color: #fff;
-    background-color: #484848;
+    color: white;
+    background-color: var(--Colour_2);
     text-decoration: none;
     padding: 0.5rem 1rem;
     transition: background-color 0.3s ease;
 }
 
 nav a:hover{
-    background-color: #ddd;
+    background-color: var(--BackGround_COlOUR);
     color: black;
 }
 
@@ -66,12 +67,38 @@ header{
     display: flex;
     justify-content: space-around;
     background-color: var(--Accent-COLOUR);
-    
+}
 
+header div {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+header div form button{
+    border-radius:50%;
+    border-color: var(--Colour_2);
+    height: 5vh;
+    width: 5vh;
+}
+
+#loginBTN i {
+    font-size: 4vh;
+    color: var(--COLOUR_3);
+}
+#profileBTN {
+    margin-left: 2vw;
+}
+
+#profileBTN i {
+    font-size: 4vh;
+    color: var(--COLOUR_3)
 }
 
 header input[type="text"] {
     width: 40%;
+    
+    border-color: var(--Colour_2);
 }
 
 footer  {

@@ -1,6 +1,13 @@
 <header>
-    <h4>Cook-EZ</h4>
+    <h2>Cook-EZ</h2>
     <input type="Text" placeholder="Search..">
-    <button>Login</button>
-    <button style="border-radius:50%;">Profile</button>
+
+    <div>
+        <form action="http://localhost:5173/login">
+            <button id="loginBTN"><i class="fa fa-sign-in" aria-hidden="true"></i></button>
+        </form>
+        <form action="">
+            <button id="profileBTN"><i class="fa fa-user" aria-hidden="true"></i></button>
+        </form>
+    </div>
 </header>
