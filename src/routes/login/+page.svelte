@@ -5,12 +5,13 @@
     import Navbar from '../navbar.svelte';
     import Footer from '../footer.svelte';
     import Header from '../header.svelte';
+    import { goto } from '$app/navigation';
 
 
     
     if (typeof window !== 'undefined' && form !== null && form !== undefined) {
         if (form) {
-            window.alert("hey ge bent ingeloged");
+            goto('/profile')
         } else {
             window.alert("Ongeldige login gegevens");
             console.log(form)
