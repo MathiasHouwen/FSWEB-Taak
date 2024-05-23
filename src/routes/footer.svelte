@@ -14,7 +14,7 @@
         <li><a href="http://localhost:5173/recepten">recpeten</a></li>
         <li><a href="http://localhost:5173/contact">contact</a></li>
         <li><a href="http://localhost:5173/login">login</a></li>
-        <li><a href="">profile</a></li>
+        <li><a href="http://localhost:5173/profile">profile</a></li>
         <li><a href="http://localhost:5173/crud">crud</a></li>
     </ul>
 

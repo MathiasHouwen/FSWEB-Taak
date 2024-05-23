@@ -22,7 +22,7 @@
 <Header></Header>
 <Navbar></Navbar>
 
-<form method="post" action='?/login'>
+<form method="post" action='?/login' class="loginform">
     <label for="email-log">email</label><br>
     <input type="email" id="email-log" name="email-log" placeholder="email.."><br>
 

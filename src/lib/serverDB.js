@@ -74,3 +74,10 @@ export async function getHashFromUser(email){
         .eq('email', email)
     return data[0].pass
 }
+
+export async function getUserFromMail(email){
+    let { data, error } = await supabase.from('Users')
+        .select('*')
+        .eq('email', email)
+    return data
+}

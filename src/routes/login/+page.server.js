@@ -1,6 +1,7 @@
 import bcrypt from 'bcrypt';
-import {PRIVATE_PEPPER} from '$env/static/private';
+import {PRIVATE_PEPPER, PRIVATE_JWT_KEY} from '$env/static/private';
 import { getHashFromUser, signUp } from '../../lib/serverDB';
+import jwt from 'jsonwebtoken';
 
 /** @type {import('./$types').PageServerLoad} */
 export async function load() {
@@ -19,7 +20,7 @@ export const actions = {
         signUp(email, hash)
 	},
 
-    login: async ({request}) => {
+    login: async ({request, cookies}) => {
         const formData = await request.formData();
         const pass = formData.get('pass')
         const email = formData.get('email-log')
@@ -27,6 +28,18 @@ export const actions = {
         const hashDB = await getHashFromUser(email)
 
         const success = await bcrypt.compare(pass + PRIVATE_PEPPER, hashDB)
+
+        if(success){
+            const tokenValue = {email: email}
+            const token = jwt.sign(tokenValue, PRIVATE_JWT_KEY)
+            cookies.set('account', token, { 
+                httpOnly: true,
+                secure: true,
+                path: '/',
+                maxAge: 3600,
+                sameSite: 'strict'
+            });
+        }
         return success
 	}
 }

@@ -16,6 +16,7 @@
 <div class="container">
     {#each data.Recepten as recept}
         <div class="item">
+            <img src="{recept.afbeelding}" alt="{recept.Naam}" class="food-image">
             <h4>{recept.Naam}</h4>
             <p>{recept.korte_beschrijving}</p>
             <a href="/recepten/{recept.id}">Click me!</a>
@@ -23,5 +24,4 @@
     {/each}
 </div>
 
-<br><br><br><br><br><br><br><br><br><br><br>
 <Footer></Footer>
