@@ -1,5 +1,5 @@
 <script>
-    import './css.css'
+    import '../css.css'
 </script>
 
 <nav>

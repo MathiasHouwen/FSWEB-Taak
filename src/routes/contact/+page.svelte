@@ -12,7 +12,7 @@
     let email = "example@gmail.com"
     let msg = "HIHIHIH"
 
-    import Navbar from "../navbar.svelte";
+    import Navbar from "../navbar/navbar.svelte";
     import Footer from "../footer.svelte";
     import Header from "../header.svelte";
 </script>
@@ -21,15 +21,19 @@
 <Header></Header>
 <Navbar></Navbar>
 
-<form method="POST" action="./contact/save">
-    <input type="text" id="voornaam" name="voornaam" placeholder="voornaam.." bind:value="{voornaam}">
-    <input type="text" id="naam" name="naam" placeholder="Your last name.." bind:value="{naam}"><br>
+<main class="contact">
+    <form method="POST" action="./contact/save">
+        <div class="name-fields">
+            <input type="text" id="voornaam" name="voornaam" placeholder="voornaam..">
+            <input type="text" id="naam" name="naam" placeholder="Your last name..">
+        </div>
+        
+        <input type="email" id="email" name="email" placeholder="email.."><br>
     
-    <input type="email" id="email" name="email" placeholder="email.." bind:value="{email}"><br>
-
-    <textarea id="msg" name="msg" placeholder="Write something.." style="height:200px" bind:value="{msg}"></textarea><br>
-    <button>SUBMIT TO ME!</button>
-</form>
+        <textarea id="msg" name="msg" placeholder="Write something.." style="height:200px"></textarea><br>
+        <button type="submit">SUBMIT TO ME!</button>
+    </form>
+</main>
 
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>

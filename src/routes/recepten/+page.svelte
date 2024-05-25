@@ -3,7 +3,7 @@
     
     export let data;
 
-    import Navbar from "../navbar.svelte";
+    import Navbar from "../navbar/navbar.svelte";
     import Footer from "../footer.svelte";
     import Header from "../header.svelte";
 
