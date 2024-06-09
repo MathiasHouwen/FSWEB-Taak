@@ -8,8 +8,10 @@
 
 </script>
 
-<Header></Header>
-<Navbar></Navbar>
+<div class="flyIn">
+    <Header></Header>
+    <Navbar></Navbar>
+</div>
 
 <main>
 

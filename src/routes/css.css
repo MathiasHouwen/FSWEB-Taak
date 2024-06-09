@@ -49,7 +49,6 @@ nav a:hover{
     color: black;
 }
 
-/*TODO FIX*/
 @media screen and (max-width: 525px) {
     nav{
         flex-direction: column;
@@ -69,6 +68,7 @@ header{
     display: flex;
     justify-content: space-around;
     background-color: var(--Accent-COLOUR);
+
 }
 
 header div {
@@ -224,7 +224,7 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%; /* Ensure the container takes the full width */
+    width: 100%;
 }
   
 .headerImage h1 {
@@ -245,7 +245,6 @@ main p {
     }
 }
 
-/* Main content styling */
 main.recept {
     max-width: 800px;
     margin: 2rem auto;
@@ -255,7 +254,6 @@ main.recept {
     border-radius: 8px;
 }
 
-/* Title styling */
 main.recept h1 {
     font-size: 2rem;
     margin-bottom: 1rem;
@@ -263,7 +261,6 @@ main.recept h1 {
     text-align: center;
 }
 
-/* Description styling */
 main.recept p {
     font-size: 1.2rem;
     margin-bottom: 1rem;
@@ -271,7 +268,6 @@ main.recept p {
     text-align: center;
 }
 
-/* Duration and attributes container */
 .main-info {
     display: flex;
     justify-content: center;
@@ -281,7 +277,6 @@ main.recept p {
     color: #888;
 }
 
-/* List styling */
 main.recept #lijsten ul,
 main.recept #lijsten ol {
     margin-bottom: 1.5rem;
@@ -303,7 +298,6 @@ main.recept img {
     border-radius: 8px;
 }
 
-/* Contact me page */
 .contact {
     background: var(--Accent-COLOUR);
     padding: 20px;
@@ -363,4 +357,14 @@ main.recept img {
 
 .contact button[type="submit"]:hover {
     background: var(--COLOUR_3);
+}
+
+@keyframes flyIn {
+    from {transform: translateY(-100%); }
+    to {transform: translateY(0);}
+}
+
+.flyIn {
+    animation: flyIn 3s linear;
+    position: relative;
 }

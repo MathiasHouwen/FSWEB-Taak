@@ -19,7 +19,7 @@
                 ID to remove
                 <input type="number" id="delteID" name="delteID">
             </label>
-            <button>EXPLODE</button>
+            <button type="submit" >EXPLODE</button>
         </form>
     </div>
 
@@ -29,7 +29,7 @@
             <span>create new row</span>
             <input type="text" id="naam" name="naam" placeholder="naam..">
             <input type="text" id="msg" name="msg" placeholder="beschrijving..">
-            <button>CREATE!</button>
+            <button type="submit" >CREATE!</button>
         </form>
     </div>
 

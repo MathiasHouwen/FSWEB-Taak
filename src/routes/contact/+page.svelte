@@ -7,16 +7,11 @@
 	/** @type {import('./$types').ActionData} */
 	// data uit actions van page.server.js
 
-    let naam = "iemand"
-    let voornaam = "iemand"
-    let email = "example@gmail.com"
-    let msg = "HIHIHIH"
-
     import Navbar from "../navbar/navbar.svelte";
     import Footer from "../footer.svelte";
     import Header from "../header.svelte";
 </script>
-
+  
 
 <Header></Header>
 <Navbar></Navbar>
