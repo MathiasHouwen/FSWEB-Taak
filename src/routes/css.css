@@ -366,5 +366,4 @@ main.recept img {
 
 .flyIn {
     animation: flyIn 3s linear;
-    position: relative;
 }
